@@ -2,8 +2,5 @@
 credentials/credentials.json
 credentials/token.json
 
-#ignore package
-package.json
-package-lock.json
 
 node_modules/
