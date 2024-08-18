@@ -12,7 +12,10 @@ module.exports = NodeHelper.create({
             console.log("Get mail notif recieved")
 
             let auth = await authorize();
-            let emails = await getMails(auth, 3);
+            if (payload > 4){
+                payload =4;
+            }
+            let emails = await getMails(auth, payload);
 
             // console.log("sender 1: "+ emails[0].sender);
 

@@ -2,6 +2,7 @@ Module.register("MMM-Gmail", {
   defaults: {
       updateInterval: 60000, // 1 min
       headerTitle: "GMAIL",
+      maxMails: 3
   },
 
   start: function() {
@@ -11,7 +12,7 @@ Module.register("MMM-Gmail", {
   },
 
   getData: function() {
-      this.sendSocketNotification('GET_MAIL', {}); // Request data from node_helper
+      this.sendSocketNotification('GET_MAIL', this.config.maxMails); // Request data from node_helper
   },
 
 
