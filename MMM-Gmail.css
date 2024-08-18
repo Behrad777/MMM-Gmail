@@ -1,0 +1,20 @@
+/* Table styling */
+.email-table {
+    width: 100%;
+    border-collapse: collapse; /* Ensures borders are collapsed into single lines */
+  }
+  
+  .email-table th, .email-table td {
+    padding: 8px; /* Adds padding inside cells */
+    padding-right: 20px;
+    padding-left: 0px;
+    text-align: left; /* Aligns text to the left */
+    font-family: var(--font-secondary);
+    font-weight: 300;
+  }
+  
+  .email-table th:nth-child(2), .email-table td:nth-child(2) {
+    font-weight: 400;
+  
+  }
+  

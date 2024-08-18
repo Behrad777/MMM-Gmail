@@ -1,8 +1,7 @@
 Module.register("MMM-Gmail", {
   defaults: {
       updateInterval: 60000, // 1 min
-      headerTitle: "GMAIL"
-
+      headerTitle: "GMAIL",
   },
 
   start: function() {
@@ -20,6 +19,11 @@ Module.register("MMM-Gmail", {
     return this.config.headerTitle;
 
   },
+
+  getStyles: function(){
+    return ['MMM-Gmail.css'];
+  },
+
 
   scheduleUpdate: function() {
       const self = this;
