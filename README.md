@@ -11,6 +11,9 @@
     <br />
   </p>
 </div>
+  
+  
+  <img src="Screenshot 2024-08-17 200749.png" alt="MMM-Gmail Screenshot" width="80%" />
 
 
 <!-- GETTING STARTED -->
