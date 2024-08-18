@@ -14,24 +14,101 @@
 
 
 <!-- GETTING STARTED -->
-## Getting Started
+# Getting Started
 
 First you will have to setup a project on google cloud console using the email that you want to display on your mirror
 
 
+## Google Cloud Project Creation and Gmail API Enablement
 
-### Installation
+This guide will walk you through creating a new Google Cloud project and enabling the Gmail API. These steps are essential if you want to access Gmail programmatically using OAuth 2.0.
 
-1. Clone the repo
-   ```sh
-   git clone https://github.com/github_username/repo_name.git
-   ```
-2. Install NPM packages
-   ```sh
-   npm install
-   ```
+## Prerequisites
+
+- A Google account.
+
+## Step 1: Create a New Google Cloud Project
+
+1. **Sign in to Google Cloud Console**
+   - Go to [Google Cloud Console](https://console.cloud.google.com/).
+   - Sign in with your Google account.
+
+2. **Create a New Project**
+   - Click on the project dropdown in the top navigation bar.
+   - Select **New Project**.
+   - Enter your project's name.
+     - Optionally, select an organization (if you're part of one).
+   - Click **Create**.
+
+3. **Wait for Project Creation**
+   - The project may take a few moments to be created.
+   - Once created, you will be redirected to the dashboard for the new project.
+
+## Step 2: Enable the Gmail API
+
+1. **Navigate to the API & Services Dashboard**
+   - From the left sidebar, go to **APIs & Services** > **Library**.
+
+2. **Search for the Gmail API**
+   - In the API library, use the search bar to search for "Gmail API."
+   - Click on the **Gmail API** result.
+
+3. **Enable the Gmail API**
+   - On the Gmail API page, click the **Enable** button.
+   - You will be redirected to the Gmail API dashboard for your project.
+
+## Step 3: Create OAuth 2.0 Credentials
+
+1. **Navigate to Credentials**
+   - From the left sidebar, go to **APIs & Services** > **Credentials**.
+
+2. **Create Credentials**
+   - Click on **+ CREATE CREDENTIALS**.
+   - Select **OAuth 2.0 Client ID**.
+
+3. **Configure the OAuth Consent Screen**
+   - If you haven't already configured the OAuth consent screen, you'll be prompted to do so.
+   - Choose between **Internal** or **External** depending on your use case.
+   - Fill out the required fields such as **App Name**, **User Support Email**, and **Developer Contact Information**.
+   - Click **Save and Continue** until you reach the summary page, then click **Back to Dashboard**.
+
+4. **Create an OAuth Client ID**
+   - After configuring the OAuth consent screen, select **Application Type** (e.g., **Web application**).
+   - Name your OAuth client (e.g., "Gmail API Client").
+   - Enter authorized redirect URIs if required (for web applications).
+   - Click **Create**.
+
+5. **Download Credentials**
+   - After creation, a dialog will show your **Client ID** and **Client Secret**.
+   - Click **Download JSON** to download the credentials file. This file will be used in your application.
+
+
+## Conclusion
+
+You have successfully created a Google Cloud project and enabled the Gmail API. You can now integrate Gmail into your application using OAuth 2.0.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+# Cloning and Installation
+
+1. Navigate into the `modules` folder of Magic Mirror:
+
+2. Clone the repo:
+   git clone https://github.com/github_username/repo_name.git
+
+3. Install NPM packages:
+   npm install
+
+4. Paste your `credentials.json` file
+   - Place the `credentials.json` file that you previously downloaded into the `credentials` folder within the `MMM-Gmail` module directory.
+   - The folder structure should look like this:
+
+     MMM-Gmail/
+     ├── credentials/
+     │   └── credentials.json
+     ├── node_helper.js
+     ├── MMM-Gmail.js
+     └── package.json
 
 <!-- USAGE EXAMPLES -->
 ## Usage
@@ -86,17 +163,6 @@ Don't forget to give the project a star! Thanks again!
 ## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- CONTACT -->
-## Contact
-
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
-
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
